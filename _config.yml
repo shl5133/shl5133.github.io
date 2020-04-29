@@ -25,7 +25,7 @@ remote_theme: fongandrew/hydeout
 # Setup
 title:            Haolin Song
 tagline:          "Haolin Song's Homepage"
-description:      "Welcome to my homepage!"
+description:      "Welcome to my homepage! I am currently studying for a master's degree in <a href="http://www.cs.bit.edu.cn">School of Computer Science & Technology</a>, <a href="http://www.bit.edu.cn">Beijing Institute of Technology</a>."
 repository:       shl5133/shl5133.github.io
 url:              https://shl5133.github.io
 baseurl:          ''
