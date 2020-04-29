@@ -3,7 +3,7 @@ layout: page
 title: About Me
 permalink: /about/
 sidebar_link: true
-sidebar_sort_order: 1
+sidebar_sort_order: 2
 ---
 
 I am currently studying for a master's degree in <a href="http://www.cs.bit.edu.cn">School of Compter Science & Technology</a>, <a href="http://www.bit.edu.cn">Beijing Institute of Technology</a>. My advisor is Prof. <a href="http://cs.bit.edu.cn/szdw/jsml/fjs/sdw_20190429011417159728/index.htm">Dawei Song</a>. 
