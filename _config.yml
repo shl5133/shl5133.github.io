@@ -26,7 +26,7 @@ remote_theme: fongandrew/hydeout
 title:            Haolin Song
 tagline:          "Haolin Song's Homepage"
 description:      "Welcome to my homepage!"
-repository:       stabbyumbrella/stabbyumbrella.github.io
+repository:       shl5133/shl5133.github.io
 url:              https://stabbyumbrella.github.io
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
