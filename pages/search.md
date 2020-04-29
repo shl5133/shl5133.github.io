@@ -1,6 +1,6 @@
 ---
 layout: search
-title: Just Fucking Google It
+title: You can search here:
 sidebar_link: false
 permalink: /search/
 ---
