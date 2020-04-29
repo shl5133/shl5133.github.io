@@ -1,9 +1,9 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 sidebar_link: true
 sidebar_sort_order: 1
 ---
 
-Fandom old (ish), aspiring/learning developer. This is part plague-diary, part code sandbox for playing with Jekyll. I can be found on Archive of our Own, tumblr, and various other places, but I'm not entirely certain I'll be linking to them yet.
+I am currently studying for a master's degree in <a href="http://www.cs.bit.edu.cn">School of Compter Science & Technology</a>, <a href="http://www.vit.edu.cn">Beijing Institute of Technology</a>.
