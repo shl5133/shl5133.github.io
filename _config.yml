@@ -23,9 +23,9 @@ highlighter:      rouge
 remote_theme: fongandrew/hydeout
 
 # Setup
-title:            Stabby Umbrella
+title:            Haolin Song
 tagline:          ''
-description:      "Cool. Cool cool cool."
+description:      "Welcome to my homepage!"
 repository:       stabbyumbrella/stabbyumbrella.github.io
 url:              https://stabbyumbrella.github.io
 baseurl:          ''
