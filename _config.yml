@@ -35,13 +35,6 @@ baseurl:          ''
                   # other pages at root, see the paginate_path and
                   # sidebar_blog_link below.
 
-author:
-  name:           'stabbyumbrella'
-  url:            https://github.com/stabbyumbrella
-  github:         https://github.com/stabbyumbrella
-#   twitter:        https://twitter.com/stabbyumbrella
-#   instagram:      https://instagram.com/stabbyumbrella
-#   archiveOfOurOwn:
 
 paginate:         5
 paginate_path:    '/page:num'
