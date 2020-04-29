@@ -27,7 +27,7 @@ title:            Haolin Song
 tagline:          "Haolin Song's Homepage"
 description:      "Welcome to my homepage!"
 repository:       shl5133/shl5133.github.io
-url:              https://stabbyumbrella.github.io
+url:              https://shl5133.github.io
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
