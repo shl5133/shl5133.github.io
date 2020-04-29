@@ -6,4 +6,28 @@ sidebar_link: true
 sidebar_sort_order: 1
 ---
 
-I am currently studying for a master's degree in <a href="http://www.cs.bit.edu.cn">School of Compter Science & Technology</a>, <a href="http://www.vit.edu.cn">Beijing Institute of Technology</a>.
+I am currently studying for a master's degree in <a href="http://www.cs.bit.edu.cn">School of Compter Science & Technology</a>, <a href="http://www.bit.edu.cn">Beijing Institute of Technology</a>. My advisor is Prof. <a href="http://cs.bit.edu.cn/szdw/jsml/fjs/sdw_20190429011417159728/index.htm">Dawei Song</a>. 
+
+### Education Background
+
+* 2015-2019, College of Information and Electrical Engineering, China Agricultural University. (Bachelor Degree)
+
+* 2019-Present, School of Compter Science & Technology, Beijing Institute of Technology. (Master Degree)
+
+### Research Interests
+
+* Natural Language Processing (NLP)
+
+* Sentiment Analysis
+
+* Information Retrieval
+
+### Honors & Awards
+
+* Meritorious Winner in Mathematical Contest In Modeling, 2017.
+
+* Second Prize in National Undergraduate Electronic Design Contest (Beijing Division), 2017.
+
+* Excellent Undergraduate, China Agricultural University, 2019.
+
+* Scholarship for outstanding study, China Agricultural University, 2015-2016, 2016-2017, 2017-2018.
