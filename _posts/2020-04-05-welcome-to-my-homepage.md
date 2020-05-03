@@ -9,4 +9,4 @@ created: 2020/04/05 20:24:04
 last modified: 2020/04/12 15:52:37
 ---
 
-You can clink "About Me" to know more about me.
+You can click "About Me" to know more about me.
