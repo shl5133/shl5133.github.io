@@ -14,7 +14,7 @@ last modified: 2020/06/17 16:30:00
 ## 1 模型原理
 
 逻辑回归使用sigmod函数（$ \frac{1}{1 + e^{-x}} $）（如下图）对样本进行回归，之后设定阈值将正负样本分开，实际是一种分类算法。
-![sigmod function](https://github.com/shl5133/shl5133.github.io/blob/master/_posts/sigmod function.jpg)
+![sigmod function](https://github.com/shl5133/shl5133.github.io/blob/master/_posts/sigmod_function.jpg)
 
 之所以选用sigmod函数，是由于逻辑回归可以看作利用sigmod函数对后验概率P(y=1 | x)的逼近（具体请见[1](https://blog.csdn.net/qq_19645269/article/details/79551576)）。
 
