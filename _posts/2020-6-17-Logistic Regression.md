@@ -22,7 +22,7 @@ This Blog is about Logistic Regression Algorithm.
 
 ## 2 问题背景
 
-对于给定的m个样本（X<sub>i</sub>, y<sub>i</sub>）（i &in; [1,m]，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
+对于给定的m个样本（X<sub>i</sub>, y<sub>i</sub>）（i属于[1,m]，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
 
 ## 3 公式推导
 
@@ -50,9 +50,9 @@ This Blog is about Logistic Regression Algorithm.
 
 ### 3.3 最大似然估计
 
-由于我们的目标是找到合适的$\theta$使得所有样本的p(correct)最大，即使得模型预测正确所有样本的概率最大，所以我们采用最大似然估计：
+由于我们的目标是找到合适的&theta;使得所有样本的p(correct)最大，即使得模型预测正确所有样本的概率最大，所以我们采用最大似然估计：
 
-<img src="https://latex.codecogs.com/gif.latex?L&space;(\theta)&space;=&space;\prod_{i&space;=&space;1}^{m}p(correct)^{i}&space;=&space;\prod_{i&space;=&space;1}^{m}h_{\theta&space;}(x^{i})^{y^{i}}(1-h_{\theta&space;}(x^{i}))^{1-y^{i}}" title="L (\theta) = \prod_{i = 1}^{m}p(correct)^{i} = \prod_{i = 1}^{m}h_{\theta }(x^{i})^{y^{i}}(1-h_{\theta }(x^{i}))^{1-y^{i}}" />
+<img src="https://latex.codecogs.com/png.latex?L&space;(\theta)&space;=&space;\prod_{i&space;=&space;1}^{m}p(correct)^{i}&space;=&space;\prod_{i&space;=&space;1}^{m}h_{\theta&space;}(x^{i})^{y^{i}}(1-h_{\theta&space;}(x^{i}))^{1-y^{i}}" title="L (\theta) = \prod_{i = 1}^{m}p(correct)^{i} = \prod_{i = 1}^{m}h_{\theta }(x^{i})^{y^{i}}(1-h_{\theta }(x^{i}))^{1-y^{i}}" />
 
 连乘不好计算，所以我们对上式取对数：
 
