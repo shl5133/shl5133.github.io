@@ -19,13 +19,16 @@ last modified: 2020/06/17 16:30:00
 
 ## 2 问题背景定义
 
-对于给定的m个样本（X<sub>i</sub>, y<sub>i</sub>）（i &in; [1,m]，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
+对于给定的m个样本（X<sub>i</sub>, y<sub>i</sub>）（i&in;[1,m]，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
 
 ## 3 公式推导
 
 ### 3.1 假设函数（hypothesis function）
+<div>
+    <img src="https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)&space;=&space;\frac{1}{1&plus;e^{-(W^{T}X&plus;b)}}&space;=&space;\frac{1}{1&plus;e^{-\theta&space;^{T}x}}" title="h_{\theta }(x) = \frac{1}{1+e^{-(W^{T}X+b)}} = \frac{1}{1+e^{-\theta ^{T}x}}" />
+    <span>(1)</span>
+</div>
 
-<img src="https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)&space;=&space;\frac{1}{1&plus;e^{-(W^{T}X&plus;b)}}&space;=&space;\frac{1}{1&plus;e^{-\theta&space;^{T}x}}" title="h_{\theta }(x) = \frac{1}{1+e^{-(W^{T}X+b)}} = \frac{1}{1+e^{-\theta ^{T}x}}" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)
 
 注：1) 其中&theta;表示模型的参数，即w，b；
 2) <img src="https://latex.codecogs.com/gif.latex?W^{T}x&space;=&space;w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;...&space;&plus;&space;w_{n}x_{n}" title="W^{T}x = w_{1}x_{1} + w_{2}x_{2} + ... + w_{n}x_{n}" />;
