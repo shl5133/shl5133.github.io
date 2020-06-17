@@ -21,7 +21,7 @@ last modified: 2020/06/17 16:30:00
 
 ## 2 问题背景定义
 
-对于给定的m个样本（X~i~, y~i~）（i $\epsilon $ [1, m]，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
+对于给定的m个样本（X~i~, y~i~）（<a href="https://www.codecogs.com/eqnedit.php?latex=i&space;\in&space;[1,m]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?i&space;\in&space;[1,m]" title="i \in [1,m]" /></a>，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
 
 ## 3 公式推导
 
