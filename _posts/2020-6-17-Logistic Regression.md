@@ -18,7 +18,7 @@ This Blog is about Logistic Regression Algorithm.
 逻辑回归使用sigmod函数（如下图）对样本进行回归，之后设定阈值将正负样本分开，实际是一种分类算法。
 <img src="https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=sigmod%E5%87%BD%E6%95%B0&step_word=&hs=0&pn=1&spn=0&di=48070&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=3943895517%2C2299808605&os=262934790%2C152820750&simid=0%2C0&adpicid=0&lpn=0&ln=922&fr=&fmq=1592391098635_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171108%2F821406a6c51d45179b0a0cb095d8f99b.jpeg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bf5i7_z%26e3Bv54AzdH3FwAzdH3Fdananal0b_8aaa8ca0n&gsm=2&rpstart=0&rpnum=0&islist=&querylist=&force=undefined" style="width:150px height:250px" />
 
-之所以选用sigmod函数，是由于逻辑回归可以看作是利用sigmod函数对后验概率P(y=1|x)的逼近（具体请见[1](https://blog.csdn.net/qq_19645269/article/details/79551576)）。
+之所以选用sigmod函数，是由于逻辑回归可以看作是利用sigmod函数对后验概率P(y=1\|x)的逼近（具体请见[1](https://blog.csdn.net/qq_19645269/article/details/79551576)）。
 
 ## 2 问题背景定义
 
