@@ -20,7 +20,7 @@ This Blog is about Logistic Regression Algorithm.
 
 之所以选用sigmod函数，是由于逻辑回归可以看作是利用sigmod函数对后验概率P(y=1\|x)的逼近（具体请见[1](https://blog.csdn.net/qq_19645269/article/details/79551576)）。
 
-## 2 问题背景定义
+## 2 问题背景
 
 对于给定的m个样本（X<sub>i</sub>, y<sub>i</sub>）（i &in; [1,m]，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
 
