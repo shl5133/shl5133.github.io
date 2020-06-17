@@ -8,7 +8,7 @@ category: Machine Learning
 created: 2020/06/17 16:30:00
 last modified: 2020/06/17 16:30:00
 ---
-
+This Blog is about Logistic Regression Algorithm
 #  Logistic Regression (逻辑回归)
 
 ## 1 模型原理
