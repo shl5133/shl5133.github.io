@@ -13,21 +13,23 @@ last modified: 2020/06/17 16:30:00
 
 ## 1 模型原理
 
-逻辑回归使用sigmod函数（$ \frac{1}{1 + e^{-x}} $）（如下图）对样本进行回归，之后设定阈值将正负样本分开，实际是一种分类算法。
+逻辑回归使用sigmod函数（如下图）对样本进行回归，之后设定阈值将正负样本分开，实际是一种分类算法。
 ![sigmod function](https://image.baidu.com/search/detail?ct=503316480&z=0&ipn=d&word=sigmod%E5%87%BD%E6%95%B0&step_word=&hs=0&pn=1&spn=0&di=48070&pi=0&rn=1&tn=baiduimagedetail&is=0%2C0&istype=0&ie=utf-8&oe=utf-8&in=&cl=2&lm=-1&st=undefined&cs=3943895517%2C2299808605&os=262934790%2C152820750&simid=0%2C0&adpicid=0&lpn=0&ln=922&fr=&fmq=1592386809812_R&fm=&ic=undefined&s=undefined&hd=undefined&latest=undefined&copyright=undefined&se=&sme=&tab=0&width=undefined&height=undefined&face=undefined&ist=&jit=&cg=&bdtype=0&oriquery=&objurl=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20171108%2F821406a6c51d45179b0a0cb095d8f99b.jpeg&fromurl=ippr_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bf5i7_z%26e3Bv54AzdH3FwAzdH3Fdananal0b_8aaa8ca0n&gsm=2&rpstart=0&rpnum=0&islist=&querylist=&force=undefined)
 之所以选用sigmod函数，是由于逻辑回归可以看作是利用sigmod函数对后验概率P(y=1|x)的逼近（具体请见[1](https://blog.csdn.net/qq_19645269/article/details/79551576)）。
 
 ## 2 问题背景定义
 
-对于给定的m个样本（X<sub>i</sub>, y<sub>i</sub>）（<a href="https://www.codecogs.com/eqnedit.php?latex=i&space;\in&space;[1,m]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?i&space;\in&space;[1,m]" title="i \in [1,m]" /></a>，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
+对于给定的m个样本（X<sub>i</sub>, y<sub>i</sub>）（i &in; [1,m]，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
 
 ## 3 公式推导
 
 ### 3.1 假设函数（hypothesis function）
 
-$h_{\theta }(x) = \frac{1}{1+e^{-(W^{T}X+b)}} = \frac{1}{1+e^{-\theta ^{T}x}}​$ 	          (1)
+<img src="https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)&space;=&space;\frac{1}{1&plus;e^{-(W^{T}X&plus;b)}}&space;=&space;\frac{1}{1&plus;e^{-\theta&space;^{T}x}}" title="h_{\theta }(x) = \frac{1}{1+e^{-(W^{T}X+b)}} = \frac{1}{1+e^{-\theta ^{T}x}}" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)
 
-注：其中&theta;表示模型的参数，即w，b；$W^{T}x = w_{1}x_{1} + w_{2}x_{2} + ... + w_{n}x_{n}$，$\theta^{T}x = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + ... + \theta_{n}x_{n}$；
+注：1) 其中&theta;表示模型的参数，即w，b；
+2) <img src="https://latex.codecogs.com/gif.latex?W^{T}x&space;=&space;w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;...&space;&plus;&space;w_{n}x_{n}" title="W^{T}x = w_{1}x_{1} + w_{2}x_{2} + ... + w_{n}x_{n}" />;
+3) <img src="https://latex.codecogs.com/gif.latex?\theta^{T}x&space;=&space;\theta_{0}&space;&plus;&space;\theta_{1}x_{1}&space;&plus;&space;\theta_{2}x_{2}&space;&plus;&space;...&space;&plus;&space;\theta_{n}x_{n}" title="\theta^{T}x = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + ... + \theta_{n}x_{n}" />；
 
 ### 3.2 预测正确的概率
 
