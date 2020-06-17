@@ -53,32 +53,31 @@ last modified: 2020/06/17 16:30:00
 
 连乘不好计算，所以我们对上式取对数：
 
-<img src="https://latex.codecogs.com/png.latex?l(\theta)&space;=&space;logL&space;(\theta)&space;=&space;\sum_{i&space;=&space;1}^{m}log(p(correct)^{i})&space;=&space;\sum_{i&space;=&space;1}^{m}(y^{i}log(h_{\theta&space;}(x^{i}))&space;&plus;&space;(1-y^{i})log(1-h_{\theta&space;}(x^{i})))" title="l(\theta) = logL (\theta) = \sum_{i = 1}^{m}log(p(correct)^{i}) = \sum_{i = 1}^{m}(y^{i}log(h_{\theta }(x^{i})) + (1-y^{i})log(1-h_{\theta }(x^{i})))" />  (2)
+<img src="https://latex.codecogs.com/png.latex?l(\theta)&space;=&space;logL&space;(\theta)&space;=&space;\sum_{i&space;=&space;1}^{m}log(p(correct)^{i})&space;=&space;\sum_{i&space;=&space;1}^{m}(y^{i}log(h_{\theta&space;}(x^{i}))&space;&plus;&space;(1-y^{i})log(1-h_{\theta&space;}(x^{i})))" title="l(\theta) = logL (\theta) = \sum_{i = 1}^{m}log(p(correct)^{i}) = \sum_{i = 1}^{m}(y^{i}log(h_{\theta }(x^{i})) + (1-y^{i})log(1-h_{\theta }(x^{i})))" />
 
-最优化任务时习惯上我们希望得到函数的最小值，所以对(6)式取负，即是求解最小值，并得到我们最终的损失函数（交叉熵损失函数）$J(\theta)​$：
+最优化任务时习惯上我们希望得到函数的最小值，所以对上式取负，即是求解最小值，并得到我们最终的损失函数（交叉熵损失函数）J(&theta;)：
 
-$J(\theta) = -l(\theta)​$	            			 (7)
+<img src="https://latex.codecogs.com/png.latex?J(\theta)&space;=&space;-l(\theta)" title="J(\theta) = -l(\theta)" />
 
 ### 3.4 最佳$\theta$值计算
 
 我们使用梯度下降计算损失函数的最小值，具体算法见[2](https://en.wikipedia.org/wiki/Gradient_descent)，求解梯度（即损失函数偏导）的公式为：
 
-$\frac{\partial J(\theta)}{\partial \theta} = \frac{\partial (-\sum_{i = 1}^{m}(y^{i}log(h_{\theta }(x^{i})) + (1-y^{i})log(1-h_{\theta }(x^{i}))))}{\partial \theta}​$
+<img src="https://latex.codecogs.com/png.latex?\frac{\partial&space;J(\theta)}{\partial&space;\theta}&space;=&space;\frac{\partial&space;(-\sum_{i&space;=&space;1}^{m}(y^{i}log(h_{\theta&space;}(x^{i}))&space;&plus;&space;(1-y^{i})log(1-h_{\theta&space;}(x^{i}))))}{\partial&space;\theta}" title="\frac{\partial J(\theta)}{\partial \theta} = \frac{\partial (-\sum_{i = 1}^{m}(y^{i}log(h_{\theta }(x^{i})) + (1-y^{i})log(1-h_{\theta }(x^{i}))))}{\partial \theta}" />
 
-​         $= -\sum_{i = 1}^{m}(y^{i}\frac{1}{h_{\theta }(x^{i})}\frac{\partial h_{\theta }(x^{i})}{\partial \theta} - (1 - y^{i})\frac{1}{1 - h_{\theta }(x^{i})}\frac{\partial h_{\theta }(x^{i})}{\partial \theta})​$
+&emsp;&emsp;&nbsp;<img src="https://latex.codecogs.com/png.latex?=&space;-\sum_{i&space;=&space;1}^{m}(y^{i}\frac{1}{h_{\theta&space;}(x^{i})}\frac{\partial&space;h_{\theta&space;}(x^{i})}{\partial&space;\theta}&space;-&space;(1&space;-&space;y^{i})\frac{1}{1&space;-&space;h_{\theta&space;}(x^{i})}\frac{\partial&space;h_{\theta&space;}(x^{i})}{\partial&space;\theta})" title="= -\sum_{i = 1}^{m}(y^{i}\frac{1}{h_{\theta }(x^{i})}\frac{\partial h_{\theta }(x^{i})}{\partial \theta} - (1 - y^{i})\frac{1}{1 - h_{\theta }(x^{i})}\frac{\partial h_{\theta }(x^{i})}{\partial \theta})" />
 
-​         $= -\sum_{i = 1}^{m}(y^{i}\frac{1}{h_{\theta }(x^{i})} - (1 - y^{i})\frac{1}{1 - h_{\theta }(x^{i})})\frac{\partial \frac{1}{1+e^{-\theta ^{T}x^{i}}}}{\partial \theta}​$
+&emsp;&emsp;&nbsp;<img src="https://latex.codecogs.com/png.latex?=&space;-\sum_{i&space;=&space;1}^{m}(y^{i}\frac{1}{h_{\theta&space;}(x^{i})}&space;-&space;(1&space;-&space;y^{i})\frac{1}{1&space;-&space;h_{\theta&space;}(x^{i})})\frac{\partial&space;\frac{1}{1&plus;e^{-\theta&space;^{T}x^{i}}}}{\partial&space;\theta}" title="= -\sum_{i = 1}^{m}(y^{i}\frac{1}{h_{\theta }(x^{i})} - (1 - y^{i})\frac{1}{1 - h_{\theta }(x^{i})})\frac{\partial \frac{1}{1+e^{-\theta ^{T}x^{i}}}}{\partial \theta}" />
 
-​         $= -\sum_{i = 1}^{m}(y^{i}\frac{1}{h_{\theta }(x^{i})} - (1 - y^{i})\frac{1}{1 - h_{\theta }(x^{i})})\frac{x^{i}e^{- \theta ^{T}x^{i}}}{(1 + e^{-\theta ^{T}x^{i}})^{2}}​$
+&emsp;&emsp;&nbsp;<img src="https://latex.codecogs.com/png.latex?=&space;-\sum_{i&space;=&space;1}^{m}(y^{i}\frac{1}{h_{\theta&space;}(x^{i})}&space;-&space;(1&space;-&space;y^{i})\frac{1}{1&space;-&space;h_{\theta&space;}(x^{i})})\frac{x^{i}e^{-&space;\theta&space;^{T}x^{i}}}{(1&space;&plus;&space;e^{-\theta&space;^{T}x^{i}})^{2}}" title="= -\sum_{i = 1}^{m}(y^{i}\frac{1}{h_{\theta }(x^{i})} - (1 - y^{i})\frac{1}{1 - h_{\theta }(x^{i})})\frac{x^{i}e^{- \theta ^{T}x^{i}}}{(1 + e^{-\theta ^{T}x^{i}})^{2}}" />
 
-​         $= -\sum_{i = 1}^{m}(y^{i}\frac{1}{h_{\theta }(x^{i})} - (1 - y^{i})\frac{1}{1 - h_{\theta }(x^{i})})x^{i}h_{\theta }(x^{i})^{2}(\frac{1}{h_{\theta }(x^{i})}-1)$
+&emsp;&emsp;&nbsp;<img src="https://latex.codecogs.com/png.latex?=&space;-\sum_{i&space;=&space;1}^{m}(y^{i}\frac{1}{h_{\theta&space;}(x^{i})}&space;-&space;(1&space;-&space;y^{i})\frac{1}{1&space;-&space;h_{\theta&space;}(x^{i})})x^{i}h_{\theta&space;}(x^{i})^{2}(\frac{1}{h_{\theta&space;}(x^{i})}-1)" title="= -\sum_{i = 1}^{m}(y^{i}\frac{1}{h_{\theta }(x^{i})} - (1 - y^{i})\frac{1}{1 - h_{\theta }(x^{i})})x^{i}h_{\theta }(x^{i})^{2}(\frac{1}{h_{\theta }(x^{i})}-1)" />
 
-​        $= -\sum_{i = 1}^{m}(y^{i}\frac{1}{h_{\theta }(x^{i})} - (1 - y^{i})\frac{1}{1 - h_{\theta }(x^{i})})x^{i}h_{\theta }(x^{i})(1 - h_{\theta }(x^{i}))$
+&emsp;&emsp;&nbsp;<img src="https://latex.codecogs.com/png.latex?=&space;-\sum_{i&space;=&space;1}^{m}(y^{i}\frac{1}{h_{\theta&space;}(x^{i})}&space;-&space;(1&space;-&space;y^{i})\frac{1}{1&space;-&space;h_{\theta&space;}(x^{i})})x^{i}h_{\theta&space;}(x^{i})(1&space;-&space;h_{\theta&space;}(x^{i}))" title="= -\sum_{i = 1}^{m}(y^{i}\frac{1}{h_{\theta }(x^{i})} - (1 - y^{i})\frac{1}{1 - h_{\theta }(x^{i})})x^{i}h_{\theta }(x^{i})(1 - h_{\theta }(x^{i}))" />
 
-​        $= -\sum_{i = 1}^{m}(y^{i}(1 - h_{\theta }(x^{i})) - (1 - y^{i})h_{\theta }(x^{i}))x^{i}$
+&emsp;&emsp;&nbsp;<img src="https://latex.codecogs.com/png.latex?=&space;-\sum_{i&space;=&space;1}^{m}(y^{i}(1&space;-&space;h_{\theta&space;}(x^{i}))&space;-&space;(1&space;-&space;y^{i})h_{\theta&space;}(x^{i}))x^{i}" title="= -\sum_{i = 1}^{m}(y^{i}(1 - h_{\theta }(x^{i})) - (1 - y^{i})h_{\theta }(x^{i}))x^{i}" />
 
-​        $= -\sum_{i = 1}^{m}( y^{i} - h_{\theta }(x^{i}))x^{i}​$
+&emsp;&emsp;&nbsp;<img src="https://latex.codecogs.com/png.latex?=&space;-\sum_{i&space;=&space;1}^{m}(&space;y^{i}&space;-&space;h_{\theta&space;}(x^{i}))x^{i}" title="= -\sum_{i = 1}^{m}( y^{i} - h_{\theta }(x^{i}))x^{i}" />
+<img src="https://latex.codecogs.com/png.latex?=&space;\sum_{i&space;=&space;1}^{m}(h_{\theta&space;}(x^{i})&space;-&space;y^{i})x^{i}" title="= \sum_{i = 1}^{m}(h_{\theta }(x^{i}) - y^{i})x^{i}" />
 
-​        $= \sum_{i = 1}^{m}(h_{\theta }(x^{i}) - y^{i})x^{i}​$
-
-其形式与最小二乘法梯度一致，区别在于最小二乘法中$h_{\theta }(x) = W^{T}x​$，也即是线性回归。
+其形式与最小二乘法梯度一致，区别在于最小二乘法中h<sub>&theta;</sub>(x) = W<sup>T</sup>x，也即是线性回归。
