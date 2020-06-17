@@ -53,7 +53,7 @@ last modified: 2020/06/17 16:30:00
 
 连乘不好计算，所以我们对上式取对数：
 
-<img src="https://latex.codecogs.com/png.latex?l(\theta)&space;=&space;logL&space;(\theta)&space;=&space;\sum_{i&space;=&space;1}^{m}log(p(correct)^{i})&space;=&space;\sum_{i&space;=&space;1}^{m}(y^{i}log(h_{\theta&space;}(x^{i}))&space;&plus;&space;(1-y^{i})log(1-h_{\theta&space;}(x^{i})))" title="l(\theta) = logL (\theta) = \sum_{i = 1}^{m}log(p(correct)^{i}) = \sum_{i = 1}^{m}(y^{i}log(h_{\theta }(x^{i})) + (1-y^{i})log(1-h_{\theta }(x^{i})))" />
+<img src="https://latex.codecogs.com/png.latex?l(\theta)&space;=&space;logL&space;(\theta)&space;=&space;\sum_{i&space;=&space;1}^{m}log(p(correct)^{i})&space;=&space;\sum_{i&space;=&space;1}^{m}(y^{i}log(h_{\theta&space;}(x^{i}))&space;&plus;&space;(1-y^{i})log(1-h_{\theta&space;}(x^{i})))" title="l(\theta) = logL (\theta) = \sum_{i = 1}^{m}log(p(correct)^{i}) = \sum_{i = 1}^{m}(y^{i}log(h_{\theta }(x^{i})) + (1-y^{i})log(1-h_{\theta }(x^{i})))" />  (2)
 
 最优化任务时习惯上我们希望得到函数的最小值，所以对(6)式取负，即是求解最小值，并得到我们最终的损失函数（交叉熵损失函数）$J(\theta)​$：
 
