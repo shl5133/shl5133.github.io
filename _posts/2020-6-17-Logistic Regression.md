@@ -20,7 +20,7 @@ last modified: 2020/06/17 16:30:00
 
 ## 2 问题背景定义
 
-对于给定的m个样本（X~i~, y~i~）（<a href="https://www.codecogs.com/eqnedit.php?latex=i&space;\in&space;[1,m]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?i&space;\in&space;[1,m]" title="i \in [1,m]" /></a>，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
+对于给定的m个样本（X<sub>i</sub>, y<sub>i</sub>）（<a href="https://www.codecogs.com/eqnedit.php?latex=i&space;\in&space;[1,m]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?i&space;\in&space;[1,m]" title="i \in [1,m]" /></a>，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
 
 ## 3 公式推导
 
@@ -28,7 +28,7 @@ last modified: 2020/06/17 16:30:00
 
 $h_{\theta }(x) = \frac{1}{1+e^{-(W^{T}X+b)}} = \frac{1}{1+e^{-\theta ^{T}x}}​$ 	          (1)
 
-注：其中$\theta$表示模型的参数，即w，b；$W^{T}x = w_{1}x_{1} + w_{2}x_{2} + ... + w_{n}x_{n}$，$\theta^{T}x = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + ... + \theta_{n}x_{n}$；
+注：其中&theta表示模型的参数，即w，b；$W^{T}x = w_{1}x_{1} + w_{2}x_{2} + ... + w_{n}x_{n}$，$\theta^{T}x = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + ... + \theta_{n}x_{n}$；
 
 ### 3.2 预测正确的概率
 
