@@ -28,8 +28,8 @@ last modified: 2020/06/17 16:30:00
 
 
 注：1) 其中&theta;表示模型的参数，即w，b；
-<img src="https://latex.codecogs.com/gif.latex?W^{T}x&space;=&space;w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;...&space;&plus;&space;w_{n}x_{n}" title="W^{T}x = w_{1}x_{1} + w_{2}x_{2} + ... + w_{n}x_{n}" />;
-<img src="https://latex.codecogs.com/gif.latex?\theta^{T}x&space;=&space;\theta_{0}&space;&plus;&space;\theta_{1}x_{1}&space;&plus;&space;\theta_{2}x_{2}&space;&plus;&space;...&space;&plus;&space;\theta_{n}x_{n}" title="\theta^{T}x = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + ... + \theta_{n}x_{n}" />；
+<img src="https://latex.codecogs.com/gif.latex?W^{T}x&space;=&space;w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;...&space;&plus;&space;w_{n}x_{n}" title="W^{T}x = w_{1}x_{1} + w_{2}x_{2} + ... + w_{n}x_{n}" />
+<img src="https://latex.codecogs.com/gif.latex?\theta^{T}x&space;=&space;\theta_{0}&space;&plus;&space;\theta_{1}x_{1}&space;&plus;&space;\theta_{2}x_{2}&space;&plus;&space;...&space;&plus;&space;\theta_{n}x_{n}" title="\theta^{T}x = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + ... + \theta_{n}x_{n}" />
 
 ### 3.2 预测正确的概率
 
