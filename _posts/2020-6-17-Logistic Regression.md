@@ -11,7 +11,7 @@ last modified: 2020/06/17 16:30:00
 
 This Blog is about Logistic Regression Algorithm.
 
-Contents
+### Contents
 
 - [模型原理](#a)
 - [问题背景](#b)
@@ -19,7 +19,7 @@ Contents
 
 <a name='a'></a>
 
-## 1 模型原理
+### 1 模型原理
 
 逻辑回归使用sigmod函数（如下图）对样本进行回归，之后设定阈值将正负样本分开，实际是一种分类算法。
 ![sigmod function](/images/sigmod_function.png)
@@ -28,17 +28,22 @@ Contents
 $$
 \frac{df(x)}{dx} = \lim_{h\ \to 0} \frac{f(x + h) - f(x)}{h}
 $$
+$
+\frac{df(x)}{dx} = \lim_{h\ \to 0} \frac{f(x + h) - f(x)}{h}
+$
+$$ \frac{df(x)}{dx} = \lim_{h\ \to 0} \frac{f(x + h) - f(x)}{h} $$
+$$\frac{df(x)}{dx} = \lim_{h\ \to 0} \frac{f(x + h) - f(x)}{h}$$
 <a name='b'></a>
 
-## 2 问题背景
+### 2 问题背景
 
 对于给定的m个样本（X<sub>i</sub>, y<sub>i</sub>）（i属于[1,m]，X为n维向量）进行二分类：y = 0为负例，y = 1为正例。
 
 <a name='c'></a>
 
-## 3 公式推导
+### 3 公式推导
 
-### 3.1 假设函数（hypothesis function）
+#### 3.1 假设函数（hypothesis function）
 <img src="https://latex.codecogs.com/gif.latex?h_{\theta&space;}(x)&space;=&space;\frac{1}{1&plus;e^{-(W^{T}X&plus;b)}}&space;=&space;\frac{1}{1&plus;e^{-\theta&space;^{T}x}}" title="h_{\theta }(x) = \frac{1}{1+e^{-(W^{T}X+b)}} = \frac{1}{1+e^{-\theta ^{T}x}}" />
 
 
@@ -46,7 +51,7 @@ $$
 <img src="https://latex.codecogs.com/gif.latex?W^{T}x&space;=&space;w_{1}x_{1}&space;&plus;&space;w_{2}x_{2}&space;&plus;&space;...&space;&plus;&space;w_{n}x_{n}" title="W^{T}x = w_{1}x_{1} + w_{2}x_{2} + ... + w_{n}x_{n}" />
 <img src="https://latex.codecogs.com/gif.latex?\theta^{T}x&space;=&space;\theta_{0}&space;&plus;&space;\theta_{1}x_{1}&space;&plus;&space;\theta_{2}x_{2}&space;&plus;&space;...&space;&plus;&space;\theta_{n}x_{n}" title="\theta^{T}x = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + ... + \theta_{n}x_{n}" />
 
-### 3.2 预测正确的概率
+#### 3.2 预测正确的概率
 
 我们将h<sub>&theta;</sub>(x)所给出的结果看作概率（因为sigmod可以将变量从（-&infin;，+&infin;）映射到（0，1）之间），即有：
 
@@ -60,7 +65,7 @@ $$
 
 2)h<sub>&theta;</sub>(x)的意义：例如对于某患者是否为患病，h<sub>&theta;</sub>(x)输出结果为0.7，则表示患者未患病的概率为70%，患病的概率为30%。
 
-### 3.3 最大似然估计
+#### 3.3 最大似然估计
 
 由于我们的目标是找到合适的&theta;使得所有样本的p(correct)最大，即使得模型预测正确所有样本的概率最大，所以我们采用最大似然估计：
 
@@ -74,7 +79,7 @@ $$
 
 <img src="https://latex.codecogs.com/png.latex?J(\theta)&space;=&space;-l(\theta)" title="J(\theta) = -l(\theta)" />
 
-### 3.4 最佳&theta;值计算
+#### 3.4 最佳&theta;值计算
 
 我们使用梯度下降计算损失函数的最小值，具体算法见[2](https://en.wikipedia.org/wiki/Gradient_descent)，求解梯度（即损失函数偏导）的公式为：
 
