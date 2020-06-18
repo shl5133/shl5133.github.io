@@ -25,14 +25,7 @@ This Blog is about Logistic Regression Algorithm.
 ![sigmod function](/images/sigmod_function.png)
 
 之所以选用sigmod函数，是由于逻辑回归可以看作是利用sigmod函数对后验概率P(y=1\|x)的逼近（具体请见[1](https://blog.csdn.net/qq_19645269/article/details/79551576)）。
-$$
-\frac{df(x)}{dx} = \lim_{h\ \to 0} \frac{f(x + h) - f(x)}{h}
-$$
-$
-\frac{df(x)}{dx} = \lim_{h\ \to 0} \frac{f(x + h) - f(x)}{h}
-$
-$$ \frac{df(x)}{dx} = \lim_{h\ \to 0} \frac{f(x + h) - f(x)}{h} $$
-$$\frac{df(x)}{dx} = \lim_{h\ \to 0} \frac{f(x + h) - f(x)}{h}$$
+
 <a name='b'></a>
 
 ### 2 问题背景
