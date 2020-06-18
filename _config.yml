@@ -22,6 +22,11 @@ markdown:         kramdown
 highlighter:      rouge
 remote_theme: fongandrew/hydeout
 
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+  
 # Setup
 title:            Haolin Song
 tagline:          "Haolin Song's Homepage"
