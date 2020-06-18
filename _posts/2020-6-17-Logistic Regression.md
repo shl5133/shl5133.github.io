@@ -12,6 +12,9 @@ last modified: 2020/06/17 16:30:00
 This Blog is about Logistic Regression Algorithm.
 
 
+$$
+\frac{df(x)}{dx} = \lim_{h\ \to 0} \frac{f(x + h) - f(x)}{h}
+$$
 
 ## 1 模型原理
 
