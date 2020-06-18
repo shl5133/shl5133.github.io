@@ -24,7 +24,7 @@ This Blog is about Logistic Regression Algorithm.
 逻辑回归使用sigmod函数（如下图）对样本进行回归，之后设定阈值将正负样本分开，实际是一种分类算法。
 ![sigmod function](/images/sigmod_function.png)
 
-之所以选用sigmod函数，是由于逻辑回归可以看作是利用sigmod函数对后验概率P(y=1\|x)的逼近（具体请见[1](https://blog.csdn.net/qq_19645269/article/details/79551576)）。
+之所以选用sigmod函数，是由于逻辑回归可以看作是利用sigmod函数对后验概率P(y=1\|x)的逼近（具体请见\[[1](https://blog.csdn.net/qq_19645269/article/details/79551576)\]）。
 
 <a name='b'></a>
 
@@ -74,7 +74,7 @@ This Blog is about Logistic Regression Algorithm.
 
 #### 3.4 最佳&theta;值计算
 
-我们使用梯度下降计算损失函数的最小值，具体算法见[2](https://en.wikipedia.org/wiki/Gradient_descent)，求解梯度（即损失函数偏导）的公式为：
+我们使用梯度下降计算损失函数的最小值，具体算法见\[[2](https://en.wikipedia.org/wiki/Gradient_descent)\]，求解梯度（即损失函数偏导）的公式为：
 
 <img src="https://latex.codecogs.com/png.latex?\frac{\partial&space;J(\theta)}{\partial&space;\theta}&space;=&space;\frac{\partial&space;(-\sum_{i&space;=&space;1}^{m}(y^{i}log(h_{\theta&space;}(x^{i}))&space;&plus;&space;(1-y^{i})log(1-h_{\theta&space;}(x^{i}))))}{\partial&space;\theta}" title="\frac{\partial J(\theta)}{\partial \theta} = \frac{\partial (-\sum_{i = 1}^{m}(y^{i}log(h_{\theta }(x^{i})) + (1-y^{i})log(1-h_{\theta }(x^{i}))))}{\partial \theta}" />
 
