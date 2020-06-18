@@ -13,6 +13,7 @@ This Blog is about Logistic Regression Algorithm.
 $$
 L (\theta) = \prod_{i = 1}^{m}p(correct)^{i} = \prod_{i = 1}^{m}h_{\theta }(x^{i})^{y^{i}}(1-h_{\theta }(x^{i}))^{1-y^{i}}
 $$
+$L (\theta) = \prod_{i = 1}^{m}p(correct)^{i} = \prod_{i = 1}^{m}h_{\theta }(x^{i})^{y^{i}}(1-h_{\theta }(x^{i}))^{1-y^{i}}$
 ### Contents
 
 - [模型原理](#a)
