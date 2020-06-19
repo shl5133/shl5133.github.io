@@ -15,7 +15,8 @@ This Blog is about Backpropagation.
 
 * [背景及定义](#a)
 * [一个简单的例子](#b)
-* [复杂一点呢](#c)
+* [一点小技巧](#c)
+* [复杂一点呢](#d)
 
 <a name='a'></a>
 
@@ -32,6 +33,8 @@ This Blog is about Backpropagation.
 ### 2 一个简单的例子
 
 我们可以将表达式转化为电路（circuit）的形式，这样不仅直观而且便于理解。将表达式：f(x, y, z) = (x + y) z，拆分为q = x + y，f = q &times; z两个表达式，我们可以将其转换为如下图所示的形式（其中圆圈代表运算符，箭头连接变量与运算符，绿色数字代表正向传播时各变量的值，红色数字代表反向传播时各变量相对于整个表达式的偏导数）。
+
+<a name='pic1'></a>
 
 ![circuit1](/images/backpropagation1.png)
 
@@ -57,7 +60,7 @@ f = q &times; z = 3 &times; -4 = -12
 
 我们所关注的主要是输入对于输出的偏导数，即第2，4，5式。
 
-可以看到，将表达式转换为电路形式后计算前向和反向传播十分直观。链式法则在电路图中的具体体现为：输出对于某一变量（如本例中的x，y，z，q）的偏导数，**实际上等于节点”输入和输出“的偏导数的乘积**。具体地说如对于本例中的q，将其左边的所有电路都抽象为一个节点，看作输入，对其求偏导数（即偏f/偏q），之后乘以其右边电路已经计算出的偏导数（即偏f/偏f）（如下图所示）。
+可以看到，将表达式转换为电路形式后计算前向和反向传播十分直观。链式法则在电路图中的具体体现为：输出对于某一变量（如本例中的x，y，z，q）的偏导数，**实际上等于节点”输入和输出“的偏导数的乘积**。具体地说如对于本例中的q，将其左边的所有电路都抽象为一个节点，看作输入，对其求偏导数（即偏f/偏q = 偏qz/偏q = z），之后乘以其右边电路已经计算出的偏导数（即偏f/偏f = 1）（如下图所示）。
 
 ![circuit2](/images/backpropagation2.png)
 
@@ -69,5 +72,65 @@ f = q &times; z = 3 &times; -4 = -12
 
 <a name='c'></a>
 
-### 3 复杂一点呢
+### 3 一点小技巧
+
+#### 3.1 电路压缩
+
+在实际应用中，转化电路不一定要每一个运算符都拆分。当已知整体表达式中部分表达式偏导数形式时，可以对电路图进行“压缩”，这样便于计算。
+
+比如：在逻辑回归算法中，sigmod函数我们已知其偏导数为如下公式，所以我们可以将这一部分进行压缩。
+
+![circuit3](/images/backpropagation3.png)
+
+对于如下逻辑回归表达式：
+
+<img src="https://latex.codecogs.com/png.latex?f(\omega,x)&space;=&space;\frac{1}{1&space;&plus;&space;e^{-(\omega_{0}x_{0}&space;&plus;&space;\omega_{1}x_{1}&space;&plus;&space;\omega_{2})}}" title="f(\omega,x) = \frac{1}{1 + e^{-(\omega_{0}x_{0} + \omega_{1}x_{1} + \omega_{2})}}" />
+
+压缩前后的对比如下图所示：
+
+![circuit4](/images/backpropagation4.png)
+
+可以看到，我们直接用一个节点代替了sigmod运算中的四个节点，从而压缩了模型，提高了计算的效率。
+
+#### 3.2 常用电路
+
+其实在电路拆解中，最常用的节点无非就是加节点和乘节点。
+
+* 加节点所做的就是将**输出的偏导数原封不动的传递给其所有节点**。如第一节中的[电路](#pic1)：对于x+y，x的偏导数 = y的偏导数 = 输出的偏导数 = -4。
+
+* 乘节点所做的就是将**将两节点的值互换再乘以输出的偏导数**。如第一节中的[电路](#pic1)：对于q &times; z，q的偏导数 = z的值 &times; 输出的偏导数 = -4 &times; 1 = -4，z的偏导数 = q的值 &times; 输出的偏导数 = 3 &times; 1 = 3。
+
+<a name='d'></a>
+
+### 4 复杂一点呢
+
+下面我们来计算一个复杂的例子：
+
+<img src="https://latex.codecogs.com/png.latex?f(x,y)&space;=&space;\frac{x&space;&plus;&space;\sigma&space;(y)}{\sigma&space;(x)&space;&plus;&space;(x&space;&plus;&space;y)^{2}}" title="f(x,y) = \frac{x + \sigma (y)}{\sigma (x) + (x + y)^{2}}" />
+
+转化为电路后如下图所示（前向传播的值已经给出）：
+
+![circuit5](/images/backpropagation5.png)
+
+开始反向传播：
+
+![circuit6](/images/backpropagation6.png)
+
+![circuit7](/images/backpropagation7.png)
+
+![circuit8](/images/backpropagation8.png)
+
+![circuit9](/images/backpropagation9.png)
+
+![circuit10](/images/backpropagation10.png)
+
+![circuit11](/images/backpropagation11.png)
+
+![circuit12](/images/backpropagation12.png)
+
+![circuit13](/images/backpropagation13.png)
+
+![circuit14](/images/backpropagation14.png)
+
+注：x，y的偏导数是所有分支偏导数的加和。
 
