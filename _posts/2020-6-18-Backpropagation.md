@@ -1,3 +1,14 @@
+---
+layout: post
+title:  "Backpropagation"
+date:   2020-06-18 17:30:00 -0600
+tags:
+   - Machine Learning Fundation
+category: Machine Learning
+created: 2020/06/18 17:30:00
+last modified: 2020/06/19 15:20:00
+---
+
 This Blog is about Backpropagation.
 
 ### Contents
