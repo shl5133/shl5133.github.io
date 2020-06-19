@@ -80,13 +80,11 @@ f = q &times; z = 3 &times; -4 = -12
 
 比如：在逻辑回归算法中，sigmod函数我们已知其导数为如下公式，所以我们可以将这一部分进行压缩。
 <img src="https://latex.codecogs.com/png.latex?\sigma&space;(x)&space;=&space;\frac{1}{1&space;&plus;&space;e^{-x}}" title="\sigma (x) = \frac{1}{1 + e^{-x}}" />
-
-![circuit3](/images/backpropagation3.png)
+<img src="https://latex.codecogs.com/png.latex?\frac{d\sigma&space;(x)}{dx}&space;=&space;(\frac{1&space;&plus;&space;e^{-x}&space;-1}{1&space;&plus;&space;e^{-x}})(\frac{1}{1&space;&plus;&space;e^{-x}})&space;=&space;(1&space;-&space;\sigma&space;(x))\sigma&space;(x)" title="\frac{d\sigma (x)}{dx} = (\frac{1 + e^{-x} -1}{1 + e^{-x}})(\frac{1}{1 + e^{-x}}) = (1 - \sigma (x))\sigma (x)" />
 
 对于如下逻辑回归表达式：
 
 <img src="https://latex.codecogs.com/png.latex?f(\omega,x)&space;=&space;\frac{1}{1&space;&plus;&space;e^{-(\omega_{0}x_{0}&space;&plus;&space;\omega_{1}x_{1}&space;&plus;&space;\omega_{2})}}" title="f(\omega,x) = \frac{1}{1 + e^{-(\omega_{0}x_{0} + \omega_{1}x_{1} + \omega_{2})}}" />
-<img src="https://latex.codecogs.com/png.latex?\frac{d\sigma&space;(x)}{dx}&space;=&space;(\frac{1&space;&plus;&space;e^{-x}&space;-1}{1&space;&plus;&space;e^{-x}})(\frac{1}{1&space;&plus;&space;e^{-x}})&space;=&space;(1&space;-&space;\sigma&space;(x))\sigma&space;(x)" title="\frac{d\sigma (x)}{dx} = (\frac{1 + e^{-x} -1}{1 + e^{-x}})(\frac{1}{1 + e^{-x}}) = (1 - \sigma (x))\sigma (x)" />
 
 压缩前后的对比如下图所示：
 
