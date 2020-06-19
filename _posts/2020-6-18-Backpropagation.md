@@ -79,7 +79,7 @@ f = q &times; z = 3 &times; -4 = -12
 在实际应用中，转化电路不一定要每一个运算符都拆分。当已知整体表达式中部分表达式偏导数形式时，可以对电路图进行“压缩”，这样便于计算。
 
 比如：在逻辑回归算法中，sigmod函数我们已知其偏导数为如下公式，所以我们可以将这一部分进行压缩。
-
+<img src="https://latex.codecogs.com/png.latex?\inline&space;\sigma&space;(x)&space;=&space;\frac{1}{1&space;&plus;&space;e^{-x}}" title="\sigma (x) = \frac{1}{1 + e^{-x}}" />  (1)
 ![circuit3](/images/backpropagation3.png)
 
 对于如下逻辑回归表达式：
