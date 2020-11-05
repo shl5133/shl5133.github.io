@@ -22,6 +22,10 @@ I am currently studying for a master's degree in <a href="http://www.cs.bit.edu.
 
 * Information Retrieval
 
+### Publications
+
+* [Haolin Song](https://shl5133.github.io), [Chen Zhang](https://genezc.github.io), [Qiuchi Li](https://qiuchili.github.io), [Dawei Song](http://cs.bit.edu.cn/szdw/jsml/js/sdw/index.htm). **End-to-end Emotion-Cause Pair Extraction via Learning to Link**. arXiv preprint arxiv:2002.10710(2020). [[paper link](https://arxiv.org/abs/2002.10710)][[code link](https://github.com/shl5133/E2EECPE)]
+
 ### Honors & Awards
 
 * Meritorious Winner in Mathematical Contest In Modeling, 2017.
