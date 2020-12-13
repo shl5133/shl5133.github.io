@@ -67,8 +67,8 @@ This Blog is about Unbiased Estimate.
 
 
 ### References
-1 [什么是无偏估计](https://www.zhihu.com/question/22983179/answer/404391738)
+\[1\] [什么是无偏估计](https://www.zhihu.com/question/22983179/answer/404391738)
 
-2 [Unbiased in Statistics: Definition and Examples](https://www.statisticshowto.com/unbiased/)
+\[2\] [Unbiased in Statistics: Definition and Examples](https://www.statisticshowto.com/unbiased/)
 
-3 [为什么样本方差（sample variance）的分母是 n-1](https://www.zhihu.com/question/20099757)
+\[3\] [为什么样本方差（sample variance）的分母是 n-1](https://www.zhihu.com/question/20099757)
