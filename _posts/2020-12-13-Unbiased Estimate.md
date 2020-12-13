@@ -44,7 +44,9 @@ This Blog is about Unbiased Estimate.
 要想得到无偏估计值，那么在各个环节都需要保证无偏。
 
 1.怎么采样：采集形式是否无偏（如问卷的设计有无歧义等）；
+
 2.选择哪些样本：样本选择方式是否无偏（如没有选择到某一类样本或者没有对某一性质没有加以区分）；
+
 ...
 
 <a name='d'></a>
@@ -65,6 +67,8 @@ This Blog is about Unbiased Estimate.
 
 
 ### 1 References
-1 [https://www.zhihu.com/search?q=%E6%97%A0%E5%81%8F%E4%BC%B0%E8%AE%A1&utm_content=search_suggestion&type=content](https://www.zhihu.com/search?q=%E6%97%A0%E5%81%8F%E4%BC%B0%E8%AE%A1&utm_content=search_suggestion&type=content)
-2 [https://www.statisticshowto.com/unbiased/](https://www.statisticshowto.com/unbiased/)
-3 [https://www.zhihu.com/question/20099757](https://www.zhihu.com/question/20099757)
+1 [什么是无偏估计](https://www.zhihu.com/search?q=%E6%97%A0%E5%81%8F%E4%BC%B0%E8%AE%A1&utm_content=search_suggestion&type=content)
+
+2 [Unbiased in Statistics: Definition and Examples](https://www.statisticshowto.com/unbiased/)
+
+3 [为什么样本方差（sample variance）的分母是 n-1](https://www.zhihu.com/question/20099757)
