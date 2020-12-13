@@ -66,8 +66,8 @@ This Blog is about Unbiased Estimate.
 
 
 
-### 1 References
-1 [什么是无偏估计](https://www.zhihu.com/search?q=%E6%97%A0%E5%81%8F%E4%BC%B0%E8%AE%A1&utm_content=search_suggestion&type=content)
+### References
+1 [什么是无偏估计](https://www.zhihu.com/question/22983179/answer/404391738)
 
 2 [Unbiased in Statistics: Definition and Examples](https://www.statisticshowto.com/unbiased/)
 
