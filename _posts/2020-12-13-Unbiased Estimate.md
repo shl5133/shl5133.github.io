@@ -88,7 +88,7 @@ This Blog is about Unbiased Estimate.
 <img src="https://latex.codecogs.com/gif.latex?=\frac{n-1}{n}\sigma&space;^{2}\neq&space;\sigma&space;^{2}" title="=\frac{n-1}{n}\sigma ^{2}\neq \sigma ^{2}" />
 从上式可以看出S<sup>2</sup>是对σ<sup>2</sup>的有偏估计。但是我们可以将其修正为无偏估计。
 <img src="https://latex.codecogs.com/gif.latex?\sigma^{2}=&space;\frac{n}{n-1}E(S^{2})=\frac{n}{n-1}E(\frac{1}{n}\sum_{n}^{i=1}(X^{i}-\bar{X})^{2})=E(\frac{1}{n-1}\sum_{n}^{i=1}(X^{i}-\bar{X})^{2})=E(\frac{1}{n-1}S^{2})" title="\sigma^{2}= \frac{n}{n-1}E(S^{2})=\frac{n}{n-1}E(\frac{1}{n}\sum_{n}^{i=1}(X^{i}-\bar{X})^{2})=E(\frac{1}{n-1}\sum_{n}^{i=1}(X^{i}-\bar{X})^{2})=E(\frac{1}{n-1}S^{2})" />
-由上式可得，1/(n-1)倍的S<sup>2</sup>的期望对σ<sup>2</sup>是一种无偏估计。
+由上式可得，修正后1/(n-1)倍的S<sup>2</sup>的期望对σ<sup>2</sup>是一种无偏估计。
 
 ### References
 \[1\] [什么是无偏估计](https://www.zhihu.com/question/22983179/answer/404391738)
