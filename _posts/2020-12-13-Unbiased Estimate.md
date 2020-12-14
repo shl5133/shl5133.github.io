@@ -68,6 +68,17 @@ This Blog is about Unbiased Estimate.
 ![6](/images/unbiased_estimate/unbiased_6.png)
 ![7](/images/unbiased_estimate/unbiased_7.png)
 下面我们来验证S<sup>2</sup>是对σ<sup>2</sup>的有偏估计还是无偏估计：
+<img src="https://latex.codecogs.com/gif.latex?E(S^{2})=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\bar{X})^{2}]" title="E(S^{2})=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\bar{X})^{2}]" />
+<img src="https://latex.codecogs.com/gif.latex?E[\frac{1}{n}\sum_{n}^{i=1}((X_{i}-\mu&space;)-(\bar{X}-\mu))^{2}]" title="=E[\frac{1}{n}\sum_{n}^{i=1}((X_{i}-\mu )-(\bar{X}-\mu))^{2}]" />
+<img src="https://latex.codecogs.com/gif.latex?E[\frac{1}{n}\sum_{n}^{i=1}((X_{i}-\mu&space;)^{2}-2(X_{i}-\mu&space;)(\bar{X}-\mu)&plus;(\bar{X}-\mu)^{2})]" title="=E[\frac{1}{n}\sum_{n}^{i=1}((X_{i}-\mu )^{2}-2(X_{i}-\mu )(\bar{X}-\mu)+(\bar{X}-\mu)^{2})]" />
+<img src="https://latex.codecogs.com/gif.latex?=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)^{2}-\frac{2}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)(\bar{X}-\mu)&plus;\frac{1}{n}\sum_{n}^{i=1}(\bar{X}-\mu)^{2}]" title="=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu )^{2}-\frac{2}{n}\sum_{n}^{i=1}(X_{i}-\mu )(\bar{X}-\mu)+\frac{1}{n}\sum_{n}^{i=1}(\bar{X}-\mu)^{2}]" />
+<img src="https://latex.codecogs.com/gif.latex?=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)^{2}-\frac{2}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)(\bar{X}-\mu)&plus;\frac{1}{n}(\bar{X}-\mu)^{2}\sum_{n}^{i=1}1]" title="=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu )^{2}-\frac{2}{n}\sum_{n}^{i=1}(X_{i}-\mu )(\bar{X}-\mu)+\frac{1}{n}(\bar{X}-\mu)^{2}\sum_{n}^{i=1}1]" />
+<img src="https://latex.codecogs.com/gif.latex?=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)^{2}-\frac{2}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)(\bar{X}-\mu)&plus;\frac{1}{n}(\bar{X}-\mu)^{2}n]" title="=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu )^{2}-\frac{2}{n}\sum_{n}^{i=1}(X_{i}-\mu )(\bar{X}-\mu)+\frac{1}{n}(\bar{X}-\mu)^{2}n]" />
+<img src="https://latex.codecogs.com/gif.latex?=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)^{2}-\frac{2}{n}(\bar{X}-\mu)\sum_{n}^{i=1}(X_{i}-\mu&space;)&plus;(\bar{X}-\mu)^{2}]" title="=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu )^{2}-\frac{2}{n}(\bar{X}-\mu)\sum_{n}^{i=1}(X_{i}-\mu )+(\bar{X}-\mu)^{2}]" />
+<img src="https://latex.codecogs.com/gif.latex?\bar{X}-\mu=\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)" title="\bar{X}-\mu=\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu )" />
+<img src="https://latex.codecogs.com/gif.latex?E(S^{2})=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)^{2}-\frac{2}{n}(\bar{X}-\mu)n(\bar{X}-\mu)&plus;(\bar{X}-\mu)^{2}]" title="E(S^{2})=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu )^{2}-\frac{2}{n}(\bar{X}-\mu)n(\bar{X}-\mu)+(\bar{X}-\mu)^{2}]" />
+<img src="https://latex.codecogs.com/gif.latex?=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)^{2}-2(\bar{X}-\mu)^{2}&plus;(\bar{X}-\mu)^{2}]" title="=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu )^{2}-2(\bar{X}-\mu)^{2}+(\bar{X}-\mu)^{2}]" />
+<img src="https://latex.codecogs.com/gif.latex?=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu&space;)^{2}-(\bar{X}-\mu)^{2}]" title="=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\mu )^{2}-(\bar{X}-\mu)^{2}]" />
 
 从上式可以看出S<sup>2</sup>是对σ<sup>2</sup>的有偏估计。
 
