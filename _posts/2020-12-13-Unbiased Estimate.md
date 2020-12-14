@@ -52,7 +52,7 @@ This Blog is about Unbiased Estimate.
 <a name='d'></a>
 
 ### 4 总体均值及方差的无偏估计及证明
-
+<a name='mean'></a>
 1.样本均值期望等于总体均值，所以样本均值是对总体均值的无偏估计。
 
 设有随机变量X，其期望为μ。抽样n个样本X={X<sub>1</sub>,X<sub>2</sub>,..., X<sub>n</sub>}
@@ -64,8 +64,10 @@ This Blog is about Unbiased Estimate.
 3.样本方差期望小于总体方差，所以样本均值是对总体均值的有偏估计，但是1/(n-1)倍的样本方差则是无偏估计。
 总体方差σ<sup>2</sup>可由下式计算：
 ![5](/images/unbiased_estimate/unbiased_5.png)
-按照上式计算总体方差是需要得知X的具体分布或者所有数据，但实际中我们是无法得知的。所以需要用样本去估计方差，S<sup>2</sup>就是对σ<sup>2</sup>的一个近似（下式1），但是S<sup>2</sup>中的期望μ实际上我们也无法得到，所以需要用样本均值去估计总体均值（如[1](#mean)所述）（下式2）。
+按照上式计算总体方差是需要得知X的具体分布或者所有数据，但实际中我们是无法得知的。所以需要用样本去估计方差，S<sup>2</sup>就是对σ<sup>2</sup>的一个近似（下式[1](#f1)），但是S<sup>2</sup>中的期望μ实际上我们也无法得到，所以需要用样本均值去估计总体均值（如[1](#mean)所述）（下式[2](#f2)）。
+<a name='f1'></a>
 ![6](/images/unbiased_estimate/unbiased_6.png)
+<a name='f2'></a>
 ![7](/images/unbiased_estimate/unbiased_7.png)
 下面我们来验证S<sup>2</sup>是对σ<sup>2</sup>的有偏估计还是无偏估计：
 <img src="https://latex.codecogs.com/gif.latex?E(S^{2})=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\bar{X})^{2}]" title="E(S^{2})=E[\frac{1}{n}\sum_{n}^{i=1}(X_{i}-\bar{X})^{2}]" />
