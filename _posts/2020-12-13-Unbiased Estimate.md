@@ -96,5 +96,3 @@ This Blog is about Unbiased Estimate.
 \[2\] [Unbiased in Statistics: Definition and Examples](https://www.statisticshowto.com/unbiased/)
 
 \[3\] [为什么样本方差（sample variance）的分母是 n-1](https://www.zhihu.com/question/20099757)
-
-撒大苏打撒旦
