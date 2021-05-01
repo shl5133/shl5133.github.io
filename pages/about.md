@@ -34,4 +34,4 @@ I am currently studying for a master's degree in <a href="http://www.cs.bit.edu.
 
 * Excellent Undergraduate, China Agricultural University, 2019.
 
-* Scholarship for outstanding study, China Agricultural University, 2015-2016, 2016-2017, 2017-2018.
+* Scholarship of outstanding student, China Agricultural University, 2015-2016, 2016-2017, 2017-2018.
